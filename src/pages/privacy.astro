@@ -1,0 +1,219 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Privacy Policy - WorthKeeping"
+  description="WorthKeeping Privacy Policy. All your data stays local. No tracking, no analytics, no data collection."
+>
+  <Header />
+
+  <main class="flex-1 section-padding">
+    <article class="container-main max-w-3xl">
+      <header class="mb-12">
+        <h1 class="heading-lg text-text dark:text-text-dark mb-4">Privacy Policy</h1>
+        <p class="text-text-muted dark:text-text-muted-dark">
+          Last Updated: January 2025
+        </p>
+      </header>
+
+      <div class="prose-custom space-y-8">
+        <!-- The Short Version -->
+        <section class="card">
+          <h2 class="text-xl font-semibold text-text dark:text-text-dark mb-4 flex items-center gap-2">
+            <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            The Short Version
+          </h2>
+          <p class="text-text dark:text-text-dark">
+            WorthKeeping stores all your data locally in your browser. We don't have servers.
+            We can't see your data. We don't want to.
+          </p>
+        </section>
+
+        <!-- What Data We Collect -->
+        <section>
+          <h2 class="text-xl font-semibold text-text dark:text-text-dark mb-4">What Data We Collect</h2>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Work log entries you explicitly type</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Timestamps of when you created entries</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>That's it. No browsing history, no personal information, no usage analytics.</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Where Your Data is Stored -->
+        <section>
+          <h2 class="text-xl font-semibold text-text dark:text-text-dark mb-4">Where Your Data is Stored</h2>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7" />
+              </svg>
+              <span>Locally in your browser's IndexedDB storage</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+              <span>Never transmitted to any server we operate</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>We don't operate servers. There's nowhere for your data to go.</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Third-Party Services -->
+        <section>
+          <h2 class="text-xl font-semibold text-text dark:text-text-dark mb-4">Third-Party Services</h2>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2">
+              <span class="text-accent font-semibold">None by default</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-muted shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>If you enable AI chat features, requests go directly from your browser to your chosen AI provider (OpenAI, Anthropic, Google, etc.)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-muted shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>We never see, proxy, or log these requests</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-muted shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Your API key is stored locally in your browser and never transmitted to us</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Browser Permissions -->
+        <section>
+          <h2 class="text-xl font-semibold text-text dark:text-text-dark mb-4">Browser Permissions Explained</h2>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3 p-4 bg-surface dark:bg-surface-dark rounded-lg border border-border dark:border-border-dark">
+              <code class="text-sm bg-primary/10 text-primary px-2 py-1 rounded">storage</code>
+              <span>To save your work entries locally in IndexedDB</span>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface dark:bg-surface-dark rounded-lg border border-border dark:border-border-dark">
+              <code class="text-sm bg-primary/10 text-primary px-2 py-1 rounded">sidePanel</code>
+              <span>To display the WorthKeeping side panel UI</span>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface dark:bg-surface-dark rounded-lg border border-border dark:border-border-dark">
+              <code class="text-sm bg-primary/10 text-primary px-2 py-1 rounded">commands</code>
+              <span>To register the Cmd+Shift+L keyboard shortcut</span>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-text-muted dark:text-text-muted-dark">
+            We do NOT request: <code class="text-xs bg-red-500/10 text-red-500 px-1 rounded">tabs</code>,
+            <code class="text-xs bg-red-500/10 text-red-500 px-1 rounded">history</code>,
+            <code class="text-xs bg-red-500/10 text-red-500 px-1 rounded">browsingData</code>,
+            or any invasive permissions.
+          </p>
+        </section>
+
+        <!-- Data Retention & Deletion -->
+        <section>
+          <h2 class="text-xl font-semibold text-text dark:text-text-dark mb-4">Data Retention & Deletion</h2>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>You control everything</strong></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Delete individual entries anytime from the History view</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Clear all data from browser settings or by uninstalling</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Uninstalling the extension removes all associated data</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Analytics & Tracking -->
+        <section class="card border-accent/20">
+          <h2 class="text-xl font-semibold text-text dark:text-text-dark mb-4 flex items-center gap-2">
+            <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Analytics & Tracking
+          </h2>
+          <p class="text-lg text-text dark:text-text-dark font-medium mb-2">
+            None. Zero. Zilch.
+          </p>
+          <ul class="space-y-2 text-text-muted dark:text-text-muted-dark">
+            <li>No Google Analytics, no Mixpanel, no Amplitude, no tracking pixels</li>
+            <li>We genuinely have no idea how many people use this extension</li>
+            <li>We prefer it that way</li>
+          </ul>
+        </section>
+
+        <!-- Children's Privacy -->
+        <section>
+          <h2 class="text-xl font-semibold text-text dark:text-text-dark mb-4">Children's Privacy</h2>
+          <p>
+            This extension is not directed at children under 13.
+            We don't knowingly collect data from anyone (see above).
+          </p>
+        </section>
+
+        <!-- Changes to This Policy -->
+        <section>
+          <h2 class="text-xl font-semibold text-text dark:text-text-dark mb-4">Changes to This Policy</h2>
+          <ul class="space-y-2">
+            <li>We'll update this page if anything changes</li>
+            <li>Major changes will be noted in extension update notes</li>
+          </ul>
+        </section>
+
+        <!-- Contact -->
+        <section>
+          <h2 class="text-xl font-semibold text-text dark:text-text-dark mb-4">Contact</h2>
+          <p>
+            For privacy questions: <a href="mailto:privacy@worthkeeping.app" class="text-primary hover:underline">privacy@worthkeeping.app</a>
+          </p>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <Footer />
+</Layout>

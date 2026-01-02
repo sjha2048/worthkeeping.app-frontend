@@ -1,0 +1,84 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+---
+
+<header class="sticky top-0 z-50 w-full border-b border-border dark:border-border-dark bg-background/80 dark:bg-background-dark/80 backdrop-blur-lg">
+  <div class="container-main">
+    <nav class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 group">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="text-primary"
+        >
+          <!-- Bookmark shape -->
+          <path
+            d="M8 4C8 2.89543 8.89543 2 10 2H22C23.1046 2 24 2.89543 24 4V28L16 23L8 28V4Z"
+            fill="currentColor"
+            class="opacity-20"
+          />
+          <path
+            d="M8 4C8 2.89543 8.89543 2 10 2H22C23.1046 2 24 2.89543 24 4V28L16 23L8 28V4Z"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <!-- Checkmark -->
+          <path
+            d="M12 14L15 17L20 11"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-accent"
+          />
+        </svg>
+        <span class="font-semibold text-lg text-text dark:text-text-dark group-hover:text-primary transition-colors">
+          WorthKeeping
+        </span>
+      </a>
+
+      <!-- Navigation -->
+      <div class="flex items-center gap-6">
+        <nav class="hidden sm:flex items-center gap-6">
+          <a
+            href="#features"
+            class="text-sm font-medium text-text-muted dark:text-text-muted-dark hover:text-text dark:hover:text-text-dark transition-colors"
+          >
+            Features
+          </a>
+          <a
+            href="#how-it-works"
+            class="text-sm font-medium text-text-muted dark:text-text-muted-dark hover:text-text dark:hover:text-text-dark transition-colors"
+          >
+            How it Works
+          </a>
+          <a
+            href="#architecture"
+            class="text-sm font-medium text-text-muted dark:text-text-muted-dark hover:text-text dark:hover:text-text-dark transition-colors"
+          >
+            Architecture
+          </a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <ThemeToggle />
+          <a
+            href="#"
+            class="btn-primary text-sm"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-3.952 6.848a12.014 12.014 0 0 0 9.244-6.399V5.454H12c1.245 0 2.405.29 3.438.788z"/>
+            </svg>
+            Add to Chrome
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

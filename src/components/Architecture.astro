@@ -1,0 +1,123 @@
+---
+import ArchitectureDiagram from './ArchitectureDiagram.astro';
+import TechStack from './TechStack.astro';
+
+const sections = [
+  {
+    title: "Modern Extension Architecture",
+    items: [
+      "Built with WXT (Web Extension Framework) for Manifest V3 compliance",
+      "SolidJS for reactive UI with minimal bundle size (~15KB gzipped)",
+      "TypeScript throughout for type safety and developer experience",
+      "Content scripts, background workers, and side panel architecture"
+    ]
+  },
+  {
+    title: "Local-First Data Layer",
+    items: [
+      "Dexie.js wrapper over IndexedDB for structured, queryable storage",
+      "Reactive live queries with automatic UI updates",
+      "Schema versioning for seamless migrations between versions",
+      "All data encrypted at rest by browser sandbox"
+    ]
+  },
+  {
+    title: "On-Device ML Pipeline",
+    items: [
+      "Transformers.js runs MiniLM-L6-v2 entirely in the browser",
+      "384-dimensional vector embeddings generated client-side",
+      "Cosine similarity search with no server roundtrip",
+      "Background processing queue for non-blocking user experience",
+      "Model cached after first load for instant subsequent searches"
+    ]
+  },
+  {
+    title: "AI Integration Layer",
+    items: [
+      "Vercel AI SDK for unified multi-provider abstraction",
+      "Streaming responses using async generators",
+      "Support for OpenAI, Anthropic, Google, and OpenAI-compatible APIs",
+      "Direct browser-to-provider communication (we're never in the middle)",
+      "API credentials stored locally, never transmitted"
+    ]
+  },
+  {
+    title: "Privacy Architecture",
+    items: [
+      "All data stored in browser's sandboxed IndexedDB",
+      "No external network calls except user-initiated AI requests",
+      "Content Security Policy strictly enforced",
+      "Minimal permissions: storage, sidePanel, commands only",
+      "No tabs, history, or browsing data access"
+    ]
+  }
+];
+
+const samplePrompts = [
+  "What did I ship this quarter?",
+  "What challenges did I overcome?",
+  "Summarize my impact for my review",
+  "What did I learn this month?"
+];
+---
+
+<section id="architecture" class="section-padding bg-surface dark:bg-surface-dark">
+  <div class="container-main">
+    <div class="text-center mb-16">
+      <div class="badge mb-4">For Engineers & Recruiters</div>
+      <h2 class="heading-lg text-text dark:text-text-dark mb-4">
+        Built Different:
+        <span class="gradient-text">The Engineering Behind WorthKeeping</span>
+      </h2>
+      <p class="text-lg text-text-muted dark:text-text-muted-dark max-w-2xl mx-auto">
+        A local-first application with on-device ML and privacy-preserving architecture.
+      </p>
+    </div>
+
+    <!-- Architecture Diagram -->
+    <div class="mb-16">
+      <ArchitectureDiagram />
+    </div>
+
+    <!-- Tech Stack Badges -->
+    <div class="mb-16">
+      <TechStack />
+    </div>
+
+    <!-- Architecture Details Grid -->
+    <div class="grid md:grid-cols-2 gap-6 mb-16">
+      {sections.map((section) => (
+        <div class="card">
+          <h3 class="text-lg font-semibold text-text dark:text-text-dark mb-4 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-primary"></span>
+            {section.title}
+          </h3>
+          <ul class="space-y-2">
+            {section.items.map((item) => (
+              <li class="flex items-start gap-2 text-sm text-text-muted dark:text-text-muted-dark">
+                <svg class="w-4 h-4 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <!-- Sample Prompts -->
+    <div class="text-center">
+      <h3 class="text-xl font-semibold text-text dark:text-text-dark mb-6">
+        Example questions you can ask
+      </h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        {samplePrompts.map((prompt) => (
+          <div class="bg-white dark:bg-background-dark border border-border dark:border-border-dark rounded-full px-4 py-2 text-sm text-text dark:text-text-dark">
+            "{prompt}"
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

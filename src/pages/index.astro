@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Architecture from '../components/Architecture.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<Layout
+  title="WorthKeeping - Capture Work Wins for Performance Reviews"
+  description="A Chrome extension that helps you log accomplishments and generate AI-powered summaries for performance reviews. 100% local, privacy-first."
+>
+  <Header />
+
+  <main class="flex-1">
+    <Hero />
+    <Features />
+    <HowItWorks />
+    <Architecture />
+    <CTA />
+  </main>
+
+  <Footer />
+</Layout>

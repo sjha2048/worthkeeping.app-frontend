@@ -1,0 +1,74 @@
+---
+const features = [
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />`,
+    title: "Instant Capture",
+    description: "Press Cmd+Shift+L anywhere to log what you just did. Non-blocking overlay that disappears in milliseconds."
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />`,
+    title: "100% Local Storage",
+    description: "All data lives in IndexedDB. No accounts, no cloud sync, no data ever leaves your machine."
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />`,
+    title: "Semantic Search",
+    description: "Vector embeddings find memories by meaning, not just keywords. Search 'security work' and find 'fixed auth bug'."
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />`,
+    title: "AI Review Assistant",
+    description: "Chat interface with streaming responses. Ask questions about your work, get copy-paste ready bullets."
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />`,
+    title: "BYO API Key",
+    description: "Works with OpenAI, Anthropic Claude, Google Gemini, or any OpenAI-compatible endpoint (LiteLLM, Ollama)."
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`,
+    title: "Privacy by Design",
+    description: "Zero telemetry. Zero analytics. Zero tracking. We literally cannot see your data."
+  }
+];
+---
+
+<section id="features" class="section-padding bg-surface dark:bg-surface-dark">
+  <div class="container-main">
+    <div class="text-center mb-16">
+      <h2 class="heading-lg text-text dark:text-text-dark mb-4">
+        Everything you need,
+        <span class="gradient-text">nothing you don't</span>
+      </h2>
+      <p class="text-lg text-text-muted dark:text-text-muted-dark max-w-2xl mx-auto">
+        Built for busy professionals who want to capture accomplishments without disrupting their workflow.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((feature, index) => (
+        <div
+          class="card group"
+          style={`animation-delay: ${index * 100}ms`}
+        >
+          <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+            <svg
+              class="w-6 h-6 text-primary"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              set:html={feature.icon}
+            />
+          </div>
+          <h3 class="text-lg font-semibold text-text dark:text-text-dark mb-2">
+            {feature.title}
+          </h3>
+          <p class="text-text-muted dark:text-text-muted-dark">
+            {feature.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,109 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Capture",
+    description: "Global keyboard shortcut triggers a minimal overlay. Type what you did, hit enter. Done in under 3 seconds.",
+    visual: "capture"
+  },
+  {
+    number: "02",
+    title: "Accumulate",
+    description: "Entries build up over days, weeks, months. Background workers generate embeddings for intelligent search.",
+    visual: "accumulate"
+  },
+  {
+    number: "03",
+    title: "Review",
+    description: "When review season hits, ask AI to summarize your impact. Get bullet points ready for your review doc.",
+    visual: "review"
+  }
+];
+---
+
+<section id="how-it-works" class="section-padding">
+  <div class="container-main">
+    <div class="text-center mb-16">
+      <h2 class="heading-lg text-text dark:text-text-dark mb-4">
+        How it works
+      </h2>
+      <p class="text-lg text-text-muted dark:text-text-muted-dark max-w-2xl mx-auto">
+        A simple three-step workflow that fits seamlessly into your day.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      {steps.map((step, index) => (
+        <div class="relative">
+          {/* Connector line */}
+          {index < steps.length - 1 && (
+            <div class="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-border dark:from-border-dark to-transparent -translate-x-4 z-0"></div>
+          )}
+
+          <div class="relative z-10">
+            {/* Step number */}
+            <div class="flex items-center gap-4 mb-6">
+              <span class="text-5xl font-bold text-primary/20">{step.number}</span>
+              <h3 class="text-2xl font-bold text-text dark:text-text-dark">{step.title}</h3>
+            </div>
+
+            {/* Visual */}
+            <div class="mb-6 rounded-xl overflow-hidden border border-border dark:border-border-dark bg-surface dark:bg-surface-dark">
+              {step.visual === "capture" && (
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="text-xs font-mono bg-background dark:bg-background-dark px-2 py-1 rounded text-text-muted dark:text-text-muted-dark">
+                      ⌘ + ⇧ + L
+                    </span>
+                  </div>
+                  <div class="bg-white dark:bg-background-dark rounded-lg p-4 shadow-sm border border-border dark:border-border-dark">
+                    <div class="text-sm text-text-muted dark:text-text-muted-dark mb-2">What did you accomplish?</div>
+                    <div class="text-text dark:text-text-dark">Shipped user authentication feature with OAuth2 support</div>
+                  </div>
+                </div>
+              )}
+              {step.visual === "accumulate" && (
+                <div class="p-6 space-y-3">
+                  {[
+                    { date: "Today", text: "Fixed production bug in payment flow" },
+                    { date: "Yesterday", text: "Code review for team's PRs" },
+                    { date: "Dec 30", text: "Deployed monitoring dashboard" }
+                  ].map((entry) => (
+                    <div class="flex items-start gap-3 p-3 bg-white dark:bg-background-dark rounded-lg border border-border dark:border-border-dark">
+                      <div class="w-2 h-2 rounded-full bg-accent mt-2 shrink-0"></div>
+                      <div>
+                        <div class="text-xs text-text-muted dark:text-text-muted-dark">{entry.date}</div>
+                        <div class="text-sm text-text dark:text-text-dark">{entry.text}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {step.visual === "review" && (
+                <div class="p-6">
+                  <div class="bg-white dark:bg-background-dark rounded-lg p-4 border border-border dark:border-border-dark mb-3">
+                    <div class="text-sm text-primary font-medium mb-2">You asked:</div>
+                    <div class="text-sm text-text dark:text-text-dark">"Summarize my Q4 impact for my review"</div>
+                  </div>
+                  <div class="bg-white dark:bg-background-dark rounded-lg p-4 border border-border dark:border-border-dark">
+                    <div class="text-sm text-accent font-medium mb-2">AI Summary:</div>
+                    <ul class="text-sm text-text dark:text-text-dark space-y-1">
+                      <li>• Shipped 3 major features</li>
+                      <li>• Resolved 12 production bugs</li>
+                      <li>• Improved load time by 40%</li>
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Description */}
+            <p class="text-text-muted dark:text-text-muted-dark">
+              {step.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
